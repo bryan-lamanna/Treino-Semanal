@@ -7,6 +7,58 @@
     <title>Monitor de Treinos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        /* Estilo para tabela em dispositivos móveis */
+        @media (max-width: 768px) {
+
+            /* Transforma a tabela em blocos stack */
+            .table-responsive table,
+            .table-responsive thead,
+            .table-responsive tbody,
+            .table-responsive th,
+            .table-responsive td,
+            .table-responsive tr {
+                display: block;
+            }
+
+            /* Esconde cabeçalho em mobile */
+            .table-responsive thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            /* Estilo para linhas em mobile */
+            .table-responsive tr {
+                border-bottom: 2px solid #ddd;
+                margin-bottom: 1rem;
+            }
+
+            /* Estilo para células em mobile */
+            .table-responsive td {
+                border: none;
+                position: relative;
+                padding-left: 50%;
+                text-align: right;
+            }
+
+            /* Labels das células em mobile */
+            .table-responsive td:before {
+                content: attr(data-label);
+                position: absolute;
+                left: 0;
+                width: 45%;
+                padding-left: 1rem;
+                font-weight: bold;
+                text-align: left;
+            }
+
+            /* Ajuste para grupo de botões em mobile */
+            .table-responsive .btn-group {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+
         .day-card {
             transition: all 0.3s ease;
             min-height: 200px;
@@ -585,6 +637,31 @@
 
             // Fechar o modal
             bootstrap.Modal.getInstance(document.getElementById('subtitleModal')).hide();
+        }
+
+        // Exemplo de como popular a tabela de forma responsiva
+        function populateExercisesTable(exercises) {
+            const tableBody = document.getElementById('exercises-table');
+            tableBody.innerHTML = '';
+
+            exercises.forEach(exercise => {
+                const row = document.createElement('tr');
+
+                row.innerHTML = `
+            <td data-label="Exercício" class="fw-bold">${exercise.name}</td>
+            <td data-label="Equipamento" class="d-none d-sm-table-cell">${exercise.equipment}</td>
+            <td data-label="Séries x Reps">${exercise.setsReps}</td>
+            <td data-label="Carga" class="d-none d-sm-table-cell">${exercise.weight || '-'}</td>
+            <td data-label="Ações">
+                <div class="btn-group btn-group-sm">
+                    <button class="btn btn-outline-primary edit-exercise" data-id="${exercise.id}">Editar</button>
+                    <button class="btn btn-outline-danger delete-exercise" data-id="${exercise.id}">Excluir</button>
+                </div>
+            </td>
+        `;
+
+                tableBody.appendChild(row);
+            });
         }
     </script>
 </body>
