@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,21 +11,25 @@
             transition: all 0.3s ease;
             min-height: 200px;
         }
+
         .day-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
+
         .exercise-item {
             border-left: 4px solid #0d6efd;
             margin-bottom: 10px;
             padding: 10px;
             background-color: #f8f9fa;
         }
+
         .day-title {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         .subtitle {
             font-size: 0.9rem;
             color: #6c757d;
@@ -32,20 +37,23 @@
         }
     </style>
 </head>
-<body > 
+
+<body>
     <div class="container py-4">
         <h1 class="text-center mb-4">Monitor de Treinos</h1>
-        
+
         <!-- Abas de navegação -->
         <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab">Meus Treinos</button>
+                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button"
+                    role="tab">Meus Treinos</button>
             </li>
             <li class="nav-item" role="presentation">
-                <button class="nav-link" id="exercises-tab" data-bs-toggle="tab" data-bs-target="#exercises" type="button" role="tab">Exercícios</button>
+                <button class="nav-link" id="exercises-tab" data-bs-toggle="tab" data-bs-target="#exercises"
+                    type="button" role="tab">Exercícios</button>
             </li>
         </ul>
-        
+
         <div class="tab-content" id="myTabContent">
             <!-- Página inicial - Dias da semana -->
             <div class="tab-pane fade show active" id="home" role="tabpanel">
@@ -56,112 +64,138 @@
                             <div class="card-body">
                                 <div class="day-title">
                                     <h5 class="card-title">Segunda-feira</h5>
-                                    <button class="btn btn-sm btn-outline-primary edit-subtitle" data-day="monday">Editar</button>
+                                    <button class="btn btn-sm btn-outline-primary edit-subtitle"
+                                        data-day="monday">Editar</button>
                                 </div>
                                 <p class="subtitle" id="monday-subtitle">Treino de peito e tríceps</p>
                                 <div id="monday-exercises">
                                     <!-- Exercícios serão inseridos aqui via JS -->
                                 </div>
-                                <button class="btn btn-sm btn-primary mt-2 add-exercise" data-day="monday">+ Adicionar Exercício</button>
+                                <button class="btn btn-sm btn-primary mt-2 add-exercise" data-day="monday">+ Adicionar
+                                    Exercício</button>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Terça-feira -->
                     <div class="col-md-4 mb-4">
                         <div class="card day-card">
                             <div class="card-body">
                                 <div class="day-title">
                                     <h5 class="card-title">Terça-feira</h5>
-                                    <button class="btn btn-sm btn-outline-primary edit-subtitle" data-day="tuesday">Editar</button>
+                                    <button class="btn btn-sm btn-outline-primary edit-subtitle"
+                                        data-day="tuesday">Editar</button>
                                 </div>
                                 <p class="subtitle" id="tuesday-subtitle">Treino de costas e bíceps</p>
                                 <div id="tuesday-exercises">
                                     <!-- Exercícios serão inseridos aqui via JS -->
                                 </div>
-                                <button class="btn btn-sm btn-primary mt-2 add-exercise" data-day="tuesday">+ Adicionar Exercício</button>
+                                <button class="btn btn-sm btn-primary mt-2 add-exercise" data-day="tuesday">+ Adicionar
+                                    Exercício</button>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Quarta-feira -->
                     <div class="col-md-4 mb-4">
                         <div class="card day-card">
                             <div class="card-body">
                                 <div class="day-title">
                                     <h5 class="card-title">Quarta-feira</h5>
-                                    <button class="btn btn-sm btn-outline-primary edit-subtitle" data-day="wednesday">Editar</button>
+                                    <button class="btn btn-sm btn-outline-primary edit-subtitle"
+                                        data-day="wednesday">Editar</button>
                                 </div>
                                 <p class="subtitle" id="wednesday-subtitle">Treino de pernas</p>
                                 <div id="wednesday-exercises">
                                     <!-- Exercícios serão inseridos aqui via JS -->
                                 </div>
-                                <button class="btn btn-sm btn-primary mt-2 add-exercise" data-day="wednesday">+ Adicionar Exercício</button>
+                                <button class="btn btn-sm btn-primary mt-2 add-exercise" data-day="wednesday">+
+                                    Adicionar Exercício</button>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Quinta-feira -->
                     <div class="col-md-4 mb-4">
                         <div class="card day-card">
                             <div class="card-body">
                                 <div class="day-title">
                                     <h5 class="card-title">Quinta-feira</h5>
-                                    <button class="btn btn-sm btn-outline-primary edit-subtitle" data-day="thursday">Editar</button>
+                                    <button class="btn btn-sm btn-outline-primary edit-subtitle"
+                                        data-day="thursday">Editar</button>
                                 </div>
                                 <p class="subtitle" id="thursday-subtitle">Treino de ombros e abdômen</p>
                                 <div id="thursday-exercises">
                                     <!-- Exercícios serão inseridos aqui via JS -->
                                 </div>
-                                <button class="btn btn-sm btn-primary mt-2 add-exercise" data-day="thursday">+ Adicionar Exercício</button>
+                                <button class="btn btn-sm btn-primary mt-2 add-exercise" data-day="thursday">+ Adicionar
+                                    Exercício</button>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Sexta-feira -->
                     <div class="col-md-4 mb-4">
                         <div class="card day-card">
                             <div class="card-body">
                                 <div class="day-title">
                                     <h5 class="card-title">Sexta-feira</h5>
-                                    <button class="btn btn-sm btn-outline-primary edit-subtitle" data-day="friday">Editar</button>
+                                    <button class="btn btn-sm btn-outline-primary edit-subtitle"
+                                        data-day="friday">Editar</button>
                                 </div>
                                 <p class="subtitle" id="friday-subtitle">Treino cardio e mobilidade</p>
                                 <div id="friday-exercises">
                                     <!-- Exercícios serão inseridos aqui via JS -->
                                 </div>
-                                <button class="btn btn-sm btn-primary mt-2 add-exercise" data-day="friday">+ Adicionar Exercício</button>
+                                <button class="btn btn-sm btn-primary mt-2 add-exercise" data-day="friday">+ Adicionar
+                                    Exercício</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Página de exercícios -->
             <div class="tab-pane fade" id="exercises" role="tabpanel">
-                <div class="d-flex justify-content-between mb-3">
-                    <h2>Exercícios Cadastrados</h2>
+                <div
+                    class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-3">
+                    <h2 class="mb-2 mb-md-0">Exercícios Cadastrados</h2>
                     <button class="btn btn-primary" id="add-exercise-btn">+ Novo Exercício</button>
                 </div>
-                
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Exercício</th>
-                            <th>Aparelho/Equipamento</th>
-                            <th>Séries x Reps</th>
-                            <th>Carga Sugerida</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody id="exercises-table">
-                        <!-- Exercícios serão inseridos aqui via JS -->
-                    </tbody>
-                </table>
+
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th class="d-none d-md-table-cell">Exercício</th>
+                                <th class="d-none d-sm-table-cell">Aparelho/Equipamento</th>
+                                <th>Séries x Reps</th>
+                                <th class="d-none d-sm-table-cell">Carga Sugerida</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="exercises-table">
+                            <!-- Exercícios serão inseridos aqui via JS -->
+                            <!-- Exemplo de linha responsiva -->
+                            <tr>
+                                <td data-label="Exercício" class="fw-bold">Supino Reto</td>
+                                <td data-label="Equipamento" class="d-none d-sm-table-cell">Banco de supino</td>
+                                <td data-label="Séries x Reps">4x10</td>
+                                <td data-label="Carga" class="d-none d-sm-table-cell">40kg</td>
+                                <td data-label="Ações">
+                                    <div class="btn-group btn-group-sm">
+                                        <button class="btn btn-outline-primary">Editar</button>
+                                        <button class="btn btn-outline-danger">Excluir</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
-    
+
     <!-- Modal para adicionar/editar exercício -->
     <div class="modal fade" id="exerciseModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
@@ -183,7 +217,8 @@
                         </div>
                         <div class="mb-3">
                             <label for="exerciseSetsReps" class="form-label">Séries x Reps</label>
-                            <input type="text" class="form-control" id="exerciseSetsReps" placeholder="Ex: 3x12" required>
+                            <input type="text" class="form-control" id="exerciseSetsReps" placeholder="Ex: 3x12"
+                                required>
                         </div>
                         <div class="mb-3">
                             <label for="exerciseWeight" class="form-label">Carga Sugerida</label>
@@ -202,7 +237,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Modal para atribuir exercício a um dia -->
     <div class="modal fade" id="assignModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
@@ -215,7 +250,8 @@
                     <input type="hidden" id="assignExerciseId">
                     <input type="hidden" id="assignDay">
                     <div class="mb-3">
-                        <label class="form-label">Selecione o exercício para adicionar a <span id="assignDayName"></span>:</label>
+                        <label class="form-label">Selecione o exercício para adicionar a <span
+                                id="assignDayName"></span>:</label>
                         <select class="form-select" id="exerciseSelect">
                             <!-- Opções serão preenchidas via JS -->
                         </select>
@@ -228,7 +264,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- Modal para editar subtítulo do dia -->
     <div class="modal fade" id="subtitleModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog">
@@ -240,7 +276,8 @@
                 <div class="modal-body">
                     <input type="hidden" id="subtitleDay">
                     <div class="mb-3">
-                        <label for="subtitleText" class="form-label">Subtítulo para <span id="subtitleDayName"></span>:</label>
+                        <label for="subtitleText" class="form-label">Subtítulo para <span
+                                id="subtitleDayName"></span>:</label>
                         <input type="text" class="form-control" id="subtitleText">
                     </div>
                 </div>
@@ -263,7 +300,7 @@
             thursday: { subtitle: 'Treino de ombros e abdômen', exercises: [] },
             friday: { subtitle: 'Treino cardio e mobilidade', exercises: [] }
         };
-        
+
         // Tradução dos dias
         const dayNames = {
             monday: 'Segunda-feira',
@@ -272,49 +309,49 @@
             thursday: 'Quinta-feira',
             friday: 'Sexta-feira'
         };
-        
+
         // Inicialização da aplicação
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             // Carrega os dados salvos
             loadExercisesTable();
             loadWorkoutPlan();
-            
+
             // Event listeners
             document.getElementById('add-exercise-btn').addEventListener('click', showAddExerciseModal);
             document.getElementById('saveExerciseBtn').addEventListener('click', saveExercise);
-            
+
             // Event delegation para botões de editar/excluir
-            document.getElementById('exercises-table').addEventListener('click', function(e) {
+            document.getElementById('exercises-table').addEventListener('click', function (e) {
                 if (e.target.classList.contains('edit-exercise')) {
                     editExercise(e.target.dataset.id);
                 } else if (e.target.classList.contains('delete-exercise')) {
                     deleteExercise(e.target.dataset.id);
                 }
             });
-            
+
             // Event delegation para adicionar exercícios aos dias
             document.querySelectorAll('.add-exercise').forEach(btn => {
-                btn.addEventListener('click', function() {
+                btn.addEventListener('click', function () {
                     showAssignModal(this.dataset.day);
                 });
             });
-            
+
             // Event delegation para editar subtítulos
             document.querySelectorAll('.edit-subtitle').forEach(btn => {
-                btn.addEventListener('click', function() {
+                btn.addEventListener('click', function () {
                     showSubtitleModal(this.dataset.day);
                 });
             });
-            
+
             // Botão para atribuir exercício
             document.getElementById('assignExerciseBtn').addEventListener('click', assignExercise);
-            
+
             // Botão para salvar subtítulo
             document.getElementById('saveSubtitleBtn').addEventListener('click', saveSubtitle);
-            
+
             // Event delegation para remover exercícios dos dias
             document.querySelectorAll('[id$="-exercises"]').forEach(div => {
-                div.addEventListener('click', function(e) {
+                div.addEventListener('click', function (e) {
                     if (e.target.classList.contains('remove-exercise')) {
                         const day = this.id.replace('-exercises', '');
                         const exerciseId = e.target.dataset.id;
@@ -323,17 +360,17 @@
                 });
             });
         });
-        
+
         // Funções para exercícios
         function loadExercisesTable() {
             const tbody = document.getElementById('exercises-table');
             tbody.innerHTML = '';
-            
+
             if (exercises.length === 0) {
                 tbody.innerHTML = '<tr><td colspan="5" class="text-center">Nenhum exercício cadastrado</td></tr>';
                 return;
             }
-            
+
             exercises.forEach(exercise => {
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
@@ -349,16 +386,16 @@
                 tbody.appendChild(tr);
             });
         }
-        
+
         function showAddExerciseModal() {
             document.getElementById('exerciseModalTitle').textContent = 'Adicionar Exercício';
             document.getElementById('exerciseForm').reset();
             document.getElementById('exerciseId').value = '';
-            
+
             const modal = new bootstrap.Modal(document.getElementById('exerciseModal'));
             modal.show();
         }
-        
+
         function saveExercise() {
             const id = document.getElementById('exerciseId').value;
             const name = document.getElementById('exerciseName').value;
@@ -366,12 +403,12 @@
             const setsReps = document.getElementById('exerciseSetsReps').value;
             const weight = document.getElementById('exerciseWeight').value;
             const tip = document.getElementById('exerciseTip').value;
-            
+
             if (!name || !equipment || !setsReps) {
                 alert('Preencha os campos obrigatórios!');
                 return;
             }
-            
+
             if (id) {
                 // Editar exercício existente
                 const index = exercises.findIndex(ex => ex.id === id);
@@ -383,19 +420,19 @@
                 const newId = Date.now().toString();
                 exercises.push({ id: newId, name, equipment, setsReps, weight, tip });
             }
-            
+
             // Salvar no localStorage
             localStorage.setItem('exercises', JSON.stringify(exercises));
-            
+
             // Recarregar a tabela e fechar o modal
             loadExercisesTable();
             bootstrap.Modal.getInstance(document.getElementById('exerciseModal')).hide();
         }
-        
+
         function editExercise(id) {
             const exercise = exercises.find(ex => ex.id === id);
             if (!exercise) return;
-            
+
             document.getElementById('exerciseModalTitle').textContent = 'Editar Exercício';
             document.getElementById('exerciseId').value = exercise.id;
             document.getElementById('exerciseName').value = exercise.name;
@@ -403,35 +440,35 @@
             document.getElementById('exerciseSetsReps').value = exercise.setsReps;
             document.getElementById('exerciseWeight').value = exercise.weight || '';
             document.getElementById('exerciseTip').value = exercise.tip || '';
-            
+
             const modal = new bootstrap.Modal(document.getElementById('exerciseModal'));
             modal.show();
         }
-        
+
         function deleteExercise(id) {
             if (confirm('Tem certeza que deseja excluir este exercício?')) {
                 exercises = exercises.filter(ex => ex.id !== id);
-                
+
                 // Remover de todos os dias também
                 Object.keys(workoutPlan).forEach(day => {
                     workoutPlan[day].exercises = workoutPlan[day].exercises.filter(exId => exId !== id);
                 });
-                
+
                 // Salvar no localStorage
                 localStorage.setItem('exercises', JSON.stringify(exercises));
                 localStorage.setItem('workoutPlan', JSON.stringify(workoutPlan));
-                
+
                 // Recarregar tudo
                 loadExercisesTable();
                 loadWorkoutPlan();
             }
         }
-        
+
         // Funções para o plano de treino
         function loadWorkoutPlan() {
             // Salvar o plano atualizado (caso tenha sido modificado)
             localStorage.setItem('workoutPlan', JSON.stringify(workoutPlan));
-            
+
             // Carregar subtítulos
             Object.keys(workoutPlan).forEach(day => {
                 const subtitleElement = document.getElementById(`${day}-subtitle`);
@@ -439,17 +476,17 @@
                     subtitleElement.textContent = workoutPlan[day].subtitle;
                 }
             });
-            
+
             // Carregar exercícios para cada dia
             Object.keys(workoutPlan).forEach(day => {
                 const exercisesDiv = document.getElementById(`${day}-exercises`);
                 exercisesDiv.innerHTML = '';
-                
+
                 if (workoutPlan[day].exercises.length === 0) {
                     exercisesDiv.innerHTML = '<p class="text-muted">Nenhum exercício adicionado</p>';
                     return;
                 }
-                
+
                 workoutPlan[day].exercises.forEach(exId => {
                     const exercise = exercises.find(ex => ex.id === exId);
                     if (exercise) {
@@ -468,20 +505,20 @@
                 });
             });
         }
-        
+
         function showAssignModal(day) {
             document.getElementById('assignDay').value = day;
             document.getElementById('assignDayName').textContent = dayNames[day];
-            
+
             const select = document.getElementById('exerciseSelect');
             select.innerHTML = '';
-            
+
             // Adicionar opção vazia
             const defaultOption = document.createElement('option');
             defaultOption.value = '';
             defaultOption.textContent = 'Selecione um exercício';
             select.appendChild(defaultOption);
-            
+
             // Adicionar exercícios disponíveis
             exercises.forEach(exercise => {
                 // Verificar se o exercício já está atribuído a este dia
@@ -492,63 +529,64 @@
                     select.appendChild(option);
                 }
             });
-            
+
             const modal = new bootstrap.Modal(document.getElementById('assignModal'));
             modal.show();
         }
-        
+
         function assignExercise() {
             const day = document.getElementById('assignDay').value;
             const exerciseId = document.getElementById('exerciseSelect').value;
-            
+
             if (!exerciseId) {
                 alert('Selecione um exercício!');
                 return;
             }
-            
+
             // Adicionar o exercício ao dia
             if (!workoutPlan[day].exercises.includes(exerciseId)) {
                 workoutPlan[day].exercises.push(exerciseId);
-                
+
                 // Salvar e recarregar
                 localStorage.setItem('workoutPlan', JSON.stringify(workoutPlan));
                 loadWorkoutPlan();
-                
+
                 // Fechar o modal
                 bootstrap.Modal.getInstance(document.getElementById('assignModal')).hide();
             }
         }
-        
+
         function removeExerciseFromDay(day, exerciseId) {
             workoutPlan[day].exercises = workoutPlan[day].exercises.filter(id => id !== exerciseId);
-            
+
             // Salvar e recarregar
             localStorage.setItem('workoutPlan', JSON.stringify(workoutPlan));
             loadWorkoutPlan();
         }
-        
+
         function showSubtitleModal(day) {
             document.getElementById('subtitleDay').value = day;
             document.getElementById('subtitleDayName').textContent = dayNames[day];
             document.getElementById('subtitleText').value = workoutPlan[day].subtitle;
-            
+
             const modal = new bootstrap.Modal(document.getElementById('subtitleModal'));
             modal.show();
         }
-        
+
         function saveSubtitle() {
             const day = document.getElementById('subtitleDay').value;
             const subtitle = document.getElementById('subtitleText').value;
-            
+
             workoutPlan[day].subtitle = subtitle;
-            
+
             // Salvar e recarregar
             localStorage.setItem('workoutPlan', JSON.stringify(workoutPlan));
             loadWorkoutPlan();
-            
+
             // Fechar o modal
             bootstrap.Modal.getInstance(document.getElementById('subtitleModal')).hide();
         }
     </script>
 </body>
+
 </html>
